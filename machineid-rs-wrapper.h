@@ -3,7 +3,8 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-typedef enum CComponentCode_Tag {
+typedef enum CComponentCode_Tag
+{
   SystemID,
   OSName,
   CPUCores,
@@ -15,15 +16,20 @@ typedef enum CComponentCode_Tag {
   MachineName,
 } CComponentCode_Tag;
 
-typedef struct CComponentCode {
+typedef struct CComponentCode
+{
   CComponentCode_Tag tag;
-  union {
-    struct {
+  union
+  {
+    struct
+    {
       const char *file_token;
     };
   };
 } CComponentCode;
 
-void setup_builder(const struct CComponentCode *component_ptr, uintptr_t len);
-
-char *get_machine_id(const uint8_t *secret_key);
+extern "C"
+{
+  void setup_builder(const struct CComponentCode *component_ptr, uintptr_t len);
+  char *get_machine_id(const uint8_t *secret_key);
+}
