@@ -1,1 +1,4 @@
 /target
+
+# Cargo auto-gen files
+Cargo.lock
