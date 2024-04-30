@@ -3,5 +3,9 @@ name = "machine-id-wrapper"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+name = "machine_id_wrapper"
+crate-type = ["staticlib"]
+
 [dependencies]
 machineid-rs = "1.2.4"
