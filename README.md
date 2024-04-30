@@ -1,8 +1,10 @@
-## Machineid-rs wrapper for rust
+## [Machineid-rs](https://github.com/Taptiive/machineid-rs) wrapper for rust
 
 Made this because I liked using it for Rust and cant be bothered using something else
 
 Probably is very unsafe to use.
+
+Useful commands:
 ---
 Cross build for window from linux: 
 
