@@ -18,3 +18,8 @@ Install ``cbindgen`` and run:
 ```
 cbindgen --lang c > machineid-rs-wrapper.h
 ```
+
+## Get all libraries used by the rust compiler for linking
+```
+cargo rustc --lib -- --print native-static-libs
+```
